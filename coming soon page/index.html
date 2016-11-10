@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>goodcasrt.net</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+body{
+ background:url(bg/bg3.jpg) no-repeat;
+ background-size:cover;
+ font-family: sans-serif;
+}
+
+.container {
+  margin: 30px auto 0px auto;
+  padding: 0px;
+}
+
+#main { 
+  background: #3B3B3B;
+  height: 550px;
+  opacity:.8;
+}
+
+.content {
+  padding: 10px 44px;
+}
+
+.text {
+  border-bottom: 1px solid #262626;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+
+.text2 {
+  border-bottom: 1px solid #262626;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.text h2 {
+  color: green;
+  font-size: 50px;
+  font-style: oblique;
+  font-variant: normal;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 3px 1px 1px greenyellow;
+}
+
+.text2 h2 {
+  color: rosybrown;
+  font-size: 40px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 3px 1px 1px blue;
+}
+
+#contact_us {
+  color: red;
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 2px 1px 1px grey;
+}
+
+.counter {
+  background: #2C2C2C;
+  -moz-box-shadow:    inset 0 0 5px #000000;
+  -webkit-box-shadow: inset 0 0 5px #000000;
+  box-shadow:         inset 0 0 5px #000000;
+  min-height: 150px;
+  text-align: center;
+}
+
+.counter h3 {
+  color: #E5E5E5;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+#countdown {
+  color: #FFFFFF;
+}
+
+#countdown span {
+  color: #E5E5E5;
+  font-size: 26px;
+  font-weight: normal;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+	</style>
+  </head>
+  <body>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div id="main">
+				<div class="content">
+					<div class="text">
+						<h2>Coming Soon...</h2>
+					</div> <!-- /.Text Div -->
+					<div class="counter">
+						<h3></h3>
+						<div id="countdown">
+					  
+						</div><!-- /#Countdown Div -->
+					</div> <!-- /.Counter Div -->
+					<div class="text2">
+						<h2>The 2nd generation of Internet TVs</h2>
+						<h2 id="contact_us">Contact Us</h2>
+						<h3><a href="info@goodcast.net">info@goodcast.net</a></h3>
+					</div> <!-- /.Text Div -->
+				</div> <!-- /.Content Div -->
+			</div> <!-- /#Main Div -->
+		</div> <!-- /.Columns Div -->
+	</div> <!-- /.Row Div -->
+</div> <!-- /.Container Div -->
+<script>
+// set the date we're counting down to
+var target_date = new Date('Jun, 13, 2015').getTime();
+ 
+// variables for time units
+var days, hours, minutes, seconds;
+ 
+// get tag element
+var countdown = document.getElementById('countdown');
+ 
+// update the tag with id "countdown" every 1 second
+setInterval(function () {
+ 
+    // find the amount of "seconds" between now and target
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
+ 
+    // do some time calculations
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+     
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+     
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
+     
+    // format countdown string + set tag value
+    countdown.innerHTML = '<span class="days">' + days +  ' <b>Days</b></span> <span class="hours">' + hours + ' <b>Hours</b></span> <span class="minutes">'
+    + minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds + ' <b>Seconds</b></span>';  
+ 
+}, 1000);
+
+</script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
